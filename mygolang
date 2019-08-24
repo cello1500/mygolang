@@ -1,0 +1,6 @@
+#!/bin/sh
+mkdir -p ~/code/go
+docker start -ai mygolang
+if [ $? -ne 0 ]; then
+  docker-compose run --name mygolang mygolang
+fi

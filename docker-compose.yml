@@ -1,0 +1,11 @@
+version: '3'
+services:
+  mygolang:
+    build: .
+    image: mygolang
+    hostname: mygolang
+    working_dir: /root
+    environment:
+      - GO111MODULE=on
+    volumes:
+      - /home/cello/code:/root/code:Z
